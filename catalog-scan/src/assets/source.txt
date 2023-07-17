@@ -1,0 +1,1 @@
+Translations referenced from: https://github.com/jameskokoska/ACNH-Pocket-Guide-Catalog-Scanner/blob/main/catalogscanner/assets/data/dataSetTranslations.json
