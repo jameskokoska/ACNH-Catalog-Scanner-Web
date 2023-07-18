@@ -21,4 +21,10 @@ The scanned catalog entries are displayed to the user as they are scanned, to be
 This application is inspired by [nook.lol](https://nook.lol) and is meant to provide an alternative catalog scanning tool for ACNH.
 
 ## Screenshots
-Soon
+![Landing Page](screenshots/landing.png)
+
+![Scanning Page](screenshots/catalog-scan.png)
+
+![Scanning Page Mobile](screenshots/catalog-scan-mobile.png)
+
+![Landing Page Settings Mobile](screenshots/landing-settings-mobile.png)
