@@ -7,7 +7,7 @@ const LandingPage = ({ setWaitTime, waitTime, handleVideoUpload, setFramesToSkip
         <div style={{height:"5px"}}/>
         <h1>ACNH Catalog Scanner</h1>
         <p>A simple program for scanning your Animal Crossing catalog items from recorded videos. This application is an alternative to <a href="https://play.google.com/store/apps/details?id=com.acnh.catalog_scanner" target='_blank'>ACNH Pocket Guide Catalog Scanner</a>.</p>
-        <p>To scan your catalog, you must follow all instructions closely. All data is processed on-device and not uploaded.</p>
+        <p>To scan your catalog, you must follow all instructions closely. All data is processed on-device and not uploaded. Use Google Chrome for full support.</p>
         <p>
           <ol>
             <li>Currently only <a href="https://acnh-pocket.web.app/" target='_blank'>ACNH Pocket Guide</a> is supported. Other applications are welcome to enable copy and paste item names to import and use this tool.</li>
