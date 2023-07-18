@@ -45,6 +45,13 @@ p{
   font-size: 20px;
 }
 
+.suggestions-bugs-concerns p{
+  font-size: 18px;
+  margin:0px;
+  padding: 0px;
+  text-align: center;
+}
+
 li{
   margin-bottom: 10px;
 }
@@ -58,10 +65,20 @@ h1{
   text-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
 }
 
+h2{
+  font-family: "Arial-Round";
+  font-size: 35px;
+  margin:0px;
+  padding:0px;
+  margin-top:10px;
+}
+
 .half-width{
   width:50vw;
+  max-width: 900px;
   max-height:100vh;
-  overflow-y: scroll;
+  height:100vh;
+  overflow-y: auto;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -70,6 +87,8 @@ h1{
 
 .half-width-flex{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .progress{
@@ -79,9 +98,10 @@ h1{
   content:'';
   background-color: #9dffb0;
   z-index: 10;
-  transition: width 10000ms linear, height 10000ms;
+  transition: width 5000ms linear, height 1000ms;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 3px 15px;
 }
 
 .frame-display{
@@ -91,6 +111,9 @@ h1{
 }
 
 .current-frame{
+  width:70%;
+  max-width: 500px;
+  object-fit: cover;
   border-radius: 15px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
@@ -131,7 +154,8 @@ h1{
 
 .item-list li{
   list-style-type: none;
-  border-bottom: 1.5px dashed black;
+  padding: 2px 5px;
+  border-top: 1.5px dashed black;
 }
 
 .item-list ul{
@@ -151,6 +175,7 @@ h1{
   
   .half-width{
     width:100vw;
+    height: unset;
     max-height: unset;
     overflow-y: auto;
   } 
@@ -162,6 +187,17 @@ h1{
   .frame-display{
     padding-bottom: 50px;
   }
+
+  .landing{
+    padding: 10px 20px;
+    margin: 5px;
+    max-height: 95vh;
+  }
+
+  .current-frame{
+    width:95%;
+    height:95%;
+  }
 }
 
 
@@ -172,7 +208,7 @@ h1{
   background: #302f2f;
   border-radius: 50px;
   outline: none;
-  opacity: 0.7;
+  opacity: 0.8;
   -webkit-transition: .2s;
   transition: opacity .2s;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
@@ -185,8 +221,8 @@ h1{
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 18px;
+  height: 18px;
   background: #81f1f7;
   cursor: pointer;
   border-radius: 50px;
@@ -206,7 +242,7 @@ h1{
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  transition: transform 500ms;
+  transition: transform 300ms, opacity 500ms;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
@@ -214,6 +250,19 @@ h1{
 
 .button:hover{
   transform: scale(1.03);
+}
+
+.button-secondary{
+  background-color: #6a947c;
+  box-shadow: unset;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 13px;
+}
+
+.button:active{
+  transition: transform 100ms;
+  transform: scale(0.95);
 }
 
 

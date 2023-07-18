@@ -10,6 +10,7 @@ const VideoOCR = () => {
   const [progress, setProgress] = useState(0);
   const [currentFrame, setCurrentFrame] = useState(null);
   const [waitTime, setWaitTime] = useState(10);
+  const [framesToSkip, setFramesToSkip] = useState(0);
 
   const handleVideoUpload = async (event) => {
     const file = event.target.files[0];
@@ -25,7 +26,7 @@ const VideoOCR = () => {
         const cropHeight = videoHeight - videoHeight / 10 - videoHeight / 6;
 
         const framesPromises = [];
-        const frameInterval = 1 / 30;
+        const frameInterval = (framesToSkip + 1) / 31;
 
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
@@ -106,7 +107,7 @@ const VideoOCR = () => {
   return (
     <div>
       {isLoading === false && frames.length<=0 ? 
-        <LandingPage setWaitTime={setWaitTime} waitTime={waitTime} handleVideoUpload={handleVideoUpload}/>
+        <LandingPage setWaitTime={setWaitTime} waitTime={waitTime} handleVideoUpload={handleVideoUpload} setFramesToSkip={setFramesToSkip} framesToSkip={framesToSkip}/>
       : <></>}
       {isLoading === false && frames.length <= 0 ? <></> :
         <>

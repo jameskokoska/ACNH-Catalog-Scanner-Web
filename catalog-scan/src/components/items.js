@@ -12,7 +12,7 @@ const ItemsList = ({ frames, isLoading, progress }) => {
         }
       }
     }
-  }, [frames, items]);
+  }, [frames]);
 
   return (
     <>
@@ -24,12 +24,19 @@ const ItemsList = ({ frames, isLoading, progress }) => {
         </ul>
       )} */}
       <h1>Catalog</h1>
-      <p>Copy your scanned catalog entries into <a href="https://acnh-pocket.web.app/" target='_blank'>ACNH Pocket Guide</a> on the 'Catalog Scanning' page, or any other supporting application.</p>
-      {isLoading && <p>Processing video... {Math.round(progress*100).toString() + "% complete"}</p>}
+      <p>Copy your scanned catalog entries into <a href="https://acnh-pocket.web.app/" target='_blank'>ACNH Pocket Guide</a> on the Catalog Scanning page (or any other supporting application).</p>
+      {isLoading && 
+        <p>
+          Processing video... {Math.round(progress*100).toString() + "% complete"}
+        </p>
+      }
       <div className='center'>
-        <button type="button" onClick={() => {navigator.clipboard.writeText(Array.from(items).join('\n'))}} className='button'>Copy to Clipboard</button>
+        <button type="button" onClick={() => {navigator.clipboard.writeText(Array.from(items).join('\n'))}} className='button' style={{opacity: items.size <= 0 ? 0.4 : 1}}>Copy to Clipboard</button>
       </div>
-      {items.length <= 0 ? <></> : <ul>
+      <div style={{height:"10px"}}/>
+      <p style={{margin:0, padding:0, textAlign:'center'}}>{items.size} items scanned</p>
+      <div style={{height:"20px"}}/>
+      {items.size <= 0 ? <></> : <ul>
         {Array.from(items).map((item, index) => (
           <li key={index} style={{margin:0}}><p style={{margin:"5px 0"}}>{item}</p></li>
         ))}
